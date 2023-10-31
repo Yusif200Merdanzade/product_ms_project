@@ -26,22 +26,6 @@ public class ApplicationException extends RuntimeException {
         this.messageArguments = messageArguments;
     }
 
-    public ApplicationException(ErrorResponse errorResponse, Map<String, Object> messageArguments, Throwable cause) {
-        super(cause);
-        this.errorResponse = errorResponse;
-        this.messageArguments = messageArguments;
-    }
-
-    public ApplicationException(ErrorResponse errorResponse) {
-        this.errorResponse = errorResponse;
-        this.messageArguments = Map.of();
-    }
-
-    public ApplicationException(ErrorResponse errorResponse, Throwable cause) {
-        super(cause);
-        this.errorResponse = errorResponse;
-        this.messageArguments = Map.of();
-    }
 
     @Override
     public String getMessage() {

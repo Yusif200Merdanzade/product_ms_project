@@ -14,9 +14,6 @@ public enum ErrorsFinal implements ErrorResponse {
     SERVICE_TYPE_ERROR("SERVICE_TYPE_ERROR", HttpStatus.BAD_REQUEST, "{message}"),
 
 
-
-
-    //for standard exception messages
     UNIQUE_CONSTRAINT("23505", HttpStatus.BAD_REQUEST, "id-lər(unikallığa görə) təkrarlana bilməz"),
     FK_CONSTRAINT("23503", HttpStatus.BAD_REQUEST, "əlaqəli olduğu məlumat xətası"),
     NOT_EMPTY_CONSTRAINT("23502", HttpStatus.BAD_REQUEST, "{name} boş ola bilməz"),
@@ -30,8 +27,6 @@ public enum ErrorsFinal implements ErrorResponse {
     CODE_NOT_EQUALS("CODE_NOT_EQUALS", HttpStatus.BAD_REQUEST, "Daxil etdiyiniz mövcud kod '{code}' bazada olan mövcud kod ilə uzlaşmır!"),
     CODE_EQUALS("CODE_EQUALS", HttpStatus.CONFLICT, "Daxil etdiyiniz yeni kod '{code}' bazada mövcuddur, fərqli kod cəhd edin!"),
 
-    //security exception messages
-//    JWT_ERROR("JWT_ERROR",HttpStatus.UNAUTHORIZED,"{message}"),
     ACCESS_DENIED("ACCESS_DENIED", HttpStatus.FORBIDDEN, "İcazə yoxdur"),
     EXPIRED_JWT_ERROR("EXPIRED_JWT_ERROR", HttpStatus.UNAUTHORIZED, "JWT token-in vaxtı keçib"),
     UNSUPPORTED_JWT_ERROR("UNSUPPORTED_JWT_ERROR", HttpStatus.UNAUTHORIZED, "Bu token formatı dəstəklənmir"),
